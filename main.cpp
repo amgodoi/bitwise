@@ -40,6 +40,14 @@ int main(int argc, char* argv[])
         Bitwise::flipBit(&byte, 5);
         Bitwise::printBits(byte);
         std::cout << std::endl;
+        
+        Bitwise::set(&byte);
+        Bitwise::printBits(byte);
+        std::cout << std::endl;
+        
+        Bitwise::unset(&byte);
+        Bitwise::printBits(byte);
+        std::cout << std::endl;
 
         uint8_t x = 66;
         uint8_t y = 44;
