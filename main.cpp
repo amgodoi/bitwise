@@ -16,37 +16,55 @@ int main(int argc, char* argv[])
     try {
 
         uint8_t byte = 0;
-        Bitwise::printBits(byte);
+        Bitwise::print(byte);
         std::cout << std::endl;
         
-        Bitwise::setBit(&byte, 0);
-        Bitwise::printBits(byte);
+        Bitwise::set(&byte, 0);
+        Bitwise::print(byte);
         std::cout << std::endl;
         
-        Bitwise::unsetBit(&byte, 0);
-        Bitwise::printBits(byte);
+        Bitwise::unset(&byte, 0);
+        Bitwise::print(byte);
         std::cout << std::endl;
         
         bool isOn = Bitwise::isOn(byte, 0);
         std::cout << "On/Off: " << isOn << std::endl;
         
-        Bitwise::setBit(&byte, 5);
-        Bitwise::printBits(byte);
+        Bitwise::set(&byte, 5);
+        Bitwise::print(byte);
         std::cout << std::endl;
         
         isOn = Bitwise::isOn(byte, 5);
         std::cout << "On/Off: " << isOn << std::endl;
         
-        Bitwise::flipBit(&byte, 5);
-        Bitwise::printBits(byte);
+        Bitwise::flip(&byte, 5);
+        Bitwise::print(byte);
         std::cout << std::endl;
         
         Bitwise::set(&byte);
-        Bitwise::printBits(byte);
+        Bitwise::print(byte);
         std::cout << std::endl;
         
         Bitwise::unset(&byte);
-        Bitwise::printBits(byte);
+        Bitwise::print(byte);
+        std::cout << std::endl;
+        
+        Bitwise::flip(&byte);
+        Bitwise::print(byte);
+        std::cout << std::endl;
+        
+        Bitwise::flip(&byte);
+        Bitwise::print(byte);
+        std::cout << std::endl;
+        
+        Bitwise::set(&byte, 0);
+        Bitwise::set(&byte, 3);
+        Bitwise::set(&byte, 7);
+        Bitwise::print(byte);
+        std::cout << std::endl;
+        
+        Bitwise::flip(&byte);
+        Bitwise::print(byte);
         std::cout << std::endl;
 
         uint8_t x = 66;
